@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PaxGO UI Kits</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f3efe7;
+      color: #16181b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 32px 18px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(48, 92, 222, 0.16), transparent 32%),
+        radial-gradient(circle at 90% 90%, rgba(255, 111, 0, 0.16), transparent 30%),
+        #f3efe7;
+    }
+
+    main {
+      width: min(920px, 100%);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #305cde;
+      font: 700 0.78rem/1.2 Arial, sans-serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 620px;
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 5.8rem);
+      line-height: 0.94;
+      letter-spacing: -0.04em;
+      font-weight: 700;
+    }
+
+    .intro {
+      max-width: 520px;
+      margin: 24px 0 42px;
+      color: #57534d;
+      font: 1.05rem/1.5 Arial, sans-serif;
+    }
+
+    .kits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    a {
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid rgba(22, 24, 27, 0.14);
+      background: #fffdf9;
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 28px rgba(22, 24, 27, 0.12);
+      outline: none;
+    }
+
+    .admin { border-top: 8px solid #16181b; }
+    .customer { border-top: 8px solid #305cde; }
+    .driver { border-top: 8px solid #ff6f00; }
+    .guidelines { border-top: 8px solid #6b6258; }
+
+    .number {
+      color: #77736c;
+      font: 700 0.8rem/1 Arial, sans-serif;
+    }
+
+    h2 {
+      margin: 28px 0 8px;
+      font-size: 1.35rem;
+      line-height: 1.05;
+    }
+
+    .open {
+      color: #57534d;
+      font: 700 0.78rem/1 Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 680px) {
+      .kits { grid-template-columns: 1fr; }
+      a { min-height: 140px; }
+      h2 { margin-top: 18px; }
+    }
+
+    @media (min-width: 681px) and (max-width: 900px) {
+      .kits { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">PaxGO / UI kits</p>
+    <h1>Choose a view.</h1>
+    <p class="intro">Open a product interface to explore its screens and components.</p>
+
+    <nav class="kits" aria-label="PaxGO UI kits">
+      <a class="admin" href="PaxGO%20Admin%20Backoffice%20(UI%20kit).html">
+        <span class="number">01</span>
+        <span>
+          <h2>Admin Backoffice</h2>
+          <span class="open">Open kit &rarr;</span>
+        </span>
+      </a>
+
+      <a class="customer" href="PaxGO%20Customer%20App%20(UI%20kit).html">
+        <span class="number">02</span>
+        <span>
+          <h2>Customer App</h2>
+          <span class="open">Open kit &rarr;</span>
+        </span>
+      </a>
+
+      <a class="driver" href="PaxGO%20Driver%20App%20(UI%20kit).html">
+        <span class="number">03</span>
+        <span>
+          <h2>Driver App</h2>
+          <span class="open">Open kit &rarr;</span>
+        </span>
+      </a>
+
+      <a class="guidelines" href="design-system-guideline.pdf" target="_blank" rel="noopener">
+        <span class="number">04</span>
+        <span>
+          <h2>Design System Guidelines</h2>
+          <span class="open">Open PDF &rarr;</span>
+        </span>
+      </a>
+    </nav>
+  </main>
+</body>
+</html>
